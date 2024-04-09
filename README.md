@@ -50,7 +50,8 @@
 **Örnek İstek**:
 ```json
 {
-    "email": "asd@gmail.com"
+    "email": "asd@gmail.com",
+    "bank": "BANKAADI"
 }
 ```
 
