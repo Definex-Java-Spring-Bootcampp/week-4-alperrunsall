@@ -1,0 +1,19 @@
+spring:
+
+    application:
+        name: error-log-persister
+
+    kafka:
+        bootstrap-servers: 127.0.0.1:9092
+        consumer:
+            group-id: error-log-persister-consumer
+            auto-offset-reset: latest
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    data:
+        mongodb:
+            uri: mongodb://127.0.0.1:27017/patikadev
+
+server:
+    port: 8090
