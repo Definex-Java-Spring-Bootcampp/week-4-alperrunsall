@@ -14,6 +14,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(KredinbizdeException.class)
     public ResponseEntity<ExceptionResponse> handleKredinbizdeException(KredinbizdeException exception) {
         log.error("exception occurred. {0}", exception.getCause());
+        // error log'u burada yakalayıp göndermen gerekiyordu log service. nereden gönderiyorsun?
 
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
